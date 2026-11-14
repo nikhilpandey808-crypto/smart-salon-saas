@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f6f7fb" />
+    <meta name="description" content="SmartFlow salon admin dashboard demo" />
+    <title>SmartFlow | Salon dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="layout">
+      <aside class="sidebar" aria-label="Main navigation">
+        <a class="brand" href="#dashboard" aria-label="SmartFlow home">
+          <span class="brand-icon">S</span><span>smartflow<span class="brand-dot">.</span></span>
+        </a>
+        <div class="salon-switcher"><span class="salon-avatar">B</span><span><b>Bloom Studio</b><small>Downtown location</small></span><span class="switch-arrow">⌄</span></div>
+        <p class="nav-title">WORKSPACE</p>
+        <nav class="nav-links">
+          <a class="nav-link selected" href="#dashboard"><span class="nav-icon">▦</span>Dashboard</a>
+          <a class="nav-link" href="#appointments"><span class="nav-icon">▣</span>Appointments<span class="nav-count">8</span></a>
+          <a class="nav-link" href="#services"><span class="nav-icon">✳</span>Services</a>
+          <a class="nav-link" href="#team"><span class="nav-icon">♙</span>Team</a>
+          <a class="nav-link" href="#clients"><span class="nav-icon">♧</span>Clients</a>
+          <a class="nav-link" href="#reports"><span class="nav-icon">▤</span>Reports</a>
+        </nav>
+        <div class="sidebar-spacer"></div>
+        <div class="help-card"><span class="help-spark">✦</span><b>Need a hand?</b><p>Visit our help center for tips and answers.</p><a href="mailto:support@example.com">Get support <span>↗</span></a></div>
+        <a class="nav-link settings-link" href="#settings"><span class="nav-icon">⚙</span>Settings</a>
+        <div class="profile"><span class="profile-avatar">AL</span><span><b>Alicia Lee</b><small>Salon owner</small></span><button class="more-button" aria-label="Profile options">···</button></div>
+      </aside>
+
+      <main class="main" id="dashboard">
+        <header class="topbar"><div class="mobile-brand"><span class="brand-icon">S</span> smartflow<span class="brand-dot">.</span></div><div class="breadcrumb">Bloom Studio <span>/</span> Overview</div><div class="top-actions"><label class="search"><span aria-hidden="true">⌕</span><input id="globalSearch" type="search" placeholder="Search appointments" aria-label="Search appointments" /></label><button class="notification" aria-label="Notifications">♧<i></i></button><span class="top-avatar">AL</span></div></header>
+        <section class="welcome-row"><div><p class="overline">TUESDAY, JUNE 18, 2024</p><h1>Good morning, Alicia <span>✦</span></h1><p class="welcome-copy">Here’s what’s happening at your salon today.</p></div><button class="primary-button" id="newAppointment"><span>＋</span> New appointment</button></section>
+
+        <section class="metrics" aria-label="Business overview">
+          <article class="metric-card"><div class="metric-top"><span>Today’s revenue</span><span class="metric-icon lilac">＄</span></div><div class="metric-value">$1,284<span class="metric-change positive">↗ 12.8%</span></div><p>vs. $1,138 yesterday</p><div class="mini-bars" aria-hidden="true"><i style="height:34%"></i><i style="height:52%"></i><i style="height:39%"></i><i style="height:65%"></i><i style="height:48%"></i><i style="height:76%"></i><i style="height:58%"></i><i style="height:89%"></i><i style="height:70%"></i><i style="height:100%"></i></div></article>
+          <article class="metric-card"><div class="metric-top"><span>Appointments</span><span class="metric-icon peach">▣</span></div><div class="metric-value">18<span class="metric-change positive">↗ 8.3%</span></div><p>8 completed · 10 upcoming</p><div class="metric-progress"><span style="width:44%"></span></div><small class="progress-caption">44% of today complete</small></article>
+          <article class="metric-card"><div class="metric-top"><span>New clients</span><span class="metric-icon mint">♧</span></div><div class="metric-value">6<span class="metric-change positive">↗ 2 this week</span></div><p>First-time visitors today</p><div class="client-faces" aria-label="New clients"><span>JM</span><span>SK</span><span>AR</span><span>+3</span></div></article>
+          <article class="metric-card"><div class="metric-top"><span>Capacity</span><span class="metric-icon blue">◷</span></div><div class="metric-value">76%<span class="metric-change neutral">On track</span></div><p>14 of 18 slots booked</p><div class="capacity-track"><span></span></div><small class="progress-caption">4 slots still available</small></article>
+        </section>
+
+        <section class="dashboard-grid">
+          <article class="card revenue-card" id="reports"><div class="card-heading"><div><p class="overline">YOUR BUSINESS</p><h2>Revenue overview</h2></div><select aria-label="Revenue period" class="period-select"><option>This week</option><option>This month</option><option>This year</option></select></div><div class="chart-summary"><strong>$8,492</strong><span class="change-pill">↗ 10.4%</span><span class="muted">vs. previous week</span></div><div class="chart-wrap"><div class="y-labels"><span>$2k</span><span>$1.5k</span><span>$1k</span><span>$500</span><span>$0</span></div><div class="chart-area"><div class="grid-lines"><i></i><i></i><i></i><i></i><i></i></div><svg class="chart-svg" viewBox="0 0 700 190" preserveAspectRatio="none" role="img" aria-label="Revenue increased over the week, with a peak on Saturday"><defs><linearGradient id="fill" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="#8375e8" stop-opacity=".22"/><stop offset="100%" stop-color="#8375e8" stop-opacity="0"/></linearGradient></defs><path class="chart-fill" d="M0,145 C45,132 58,135 100,119 S155,128 200,102 S255,116 300,90 S355,102 400,74 S455,90 500,69 S555,78 600,43 S655,57 700,22 L700,190 L0,190 Z"/><path class="chart-line" d="M0,145 C45,132 58,135 100,119 S155,128 200,102 S255,116 300,90 S355,102 400,74 S455,90 500,69 S555,78 600,43 S655,57 700,22"/><circle cx="600" cy="43" r="5" class="chart-point"/></svg><div class="x-labels"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div></div></div></article>
+          <article class="card services-card" id="services"><div class="card-heading"><div><p class="overline">WHAT CLIENTS LOVE</p><h2>Top services</h2></div><button class="text-button" type="button">This week <span>⌄</span></button></div><div class="service-list"><div class="service-row"><span class="service-number">01</span><span class="service-mark service-purple">✂</span><span class="service-info"><b>Signature haircut</b><small>42 bookings</small></span><span class="service-revenue">$2,184</span></div><div class="service-row"><span class="service-number">02</span><span class="service-mark service-peach">✧</span><span class="service-info"><b>Balayage color</b><small>28 bookings</small></span><span class="service-revenue">$1,960</span></div><div class="service-row"><span class="service-number">03</span><span class="service-mark service-green">❋</span><span class="service-info"><b>Gel manicure</b><small>36 bookings</small></span><span class="service-revenue">$1,080</span></div><div class="service-row"><span class="service-number">04</span><span class="service-mark service-blue">☼</span><span class="service-info"><b>Glow facial</b><small>19 bookings</small></span><span class="service-revenue">$950</span></div></div><a href="#services" class="card-footer-link">View all services <span>→</span></a></article>
+        </section>
+
+        <section class="card appointments-card" id="appointments"><div class="card-heading appointments-heading"><div><p class="overline">YOUR SALON AT A GLANCE</p><h2>Today’s appointments <span class="today-count">18</span></h2></div><div class="appointment-controls"><div class="filter-tabs" role="group" aria-label="Filter appointments"><button class="filter-tab active" data-filter="all">All</button><button class="filter-tab" data-filter="upcoming">Upcoming</button><button class="filter-tab" data-filter="completed">Completed</button></div><a href="#appointments" class="text-button view-all">View calendar <span>→</span></a></div></div><div class="table-scroll"><table><thead><tr><th>CLIENT</th><th>SERVICE</th><th>TEAM MEMBER</th><th>TIME</th><th>STATUS</th><th>AMOUNT</th><th></th></tr></thead><tbody id="appointmentRows"><tr data-status="upcoming"><td><span class="client-cell"><span class="client-avatar avatar-pink">JM</span><b>Jade Miller</b></span></td><td>Signature haircut</td><td><span class="team-cell"><span class="team-dot dot-violet">M</span>Maya Chen</span></td><td>10:30 AM</td><td><span class="status status-confirmed"><i></i>Confirmed</span></td><td class="amount">$52</td><td><button class="row-menu" aria-label="More options for Jade Miller">···</button></td></tr><tr data-status="upcoming"><td><span class="client-cell"><span class="client-avatar avatar-blue">SK</span><b>Sofia Kim</b></span></td><td>Balayage color</td><td><span class="team-cell"><span class="team-dot dot-orange">L</span>Lena Ortiz</span></td><td>11:15 AM</td><td><span class="status status-checked"><i></i>Checked in</span></td><td class="amount">$140</td><td><button class="row-menu" aria-label="More options for Sofia Kim">···</button></td></tr><tr data-status="completed"><td><span class="client-cell"><span class="client-avatar avatar-green">AR</span><b>Amara Ross</b></span></td><td>Gel manicure</td><td><span class="team-cell"><span class="team-dot dot-pink">E</span>Ella Brooks</span></td><td>9:00 AM</td><td><span class="status status-completed"><i></i>Completed</span></td><td class="amount">$48</td><td><button class="row-menu" aria-label="More options for Amara Ross">···</button></td></tr><tr data-status="upcoming"><td><span class="client-cell"><span class="client-avatar avatar-yellow">NP</span><b>Nina Patel</b></span></td><td>Glow facial</td><td><span class="team-cell"><span class="team-dot dot-violet">M</span>Maya Chen</span></td><td>12:00 PM</td><td><span class="status status-confirmed"><i></i>Confirmed</span></td><td class="amount">$85</td><td><button class="row-menu" aria-label="More options for Nina Patel">···</button></td></tr></tbody></table><p id="noResults" class="no-results" hidden>No appointments match your search and filter.</p></div><div class="table-bottom"><span>Showing <b id="resultCount">4</b> of 18 appointments</span><button class="text-button" type="button">See all appointments <span>→</span></button></div></article>
+        <footer class="footer"><span>© 2024 SmartFlow</span><span>Demo dashboard · Sample data</span></footer>
+      </main>
+    </div>
+    <dialog id="appointmentDialog" class="appointment-dialog"><form method="dialog"><button class="dialog-close" aria-label="Close">×</button><span class="dialog-icon">＋</span><p class="overline">QUICK ACTION</p><h2>New appointment</h2><p>This dashboard is using sample data. Connect your booking system to create and manage real appointments.</p><button class="primary-button dialog-button">Got it</button></form></dialog>
+  </body>
+</html>
